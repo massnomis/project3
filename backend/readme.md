@@ -2,3 +2,8 @@ https://rinkeby.etherscan.io/tx/0xb8e7d6a4c5a7683e3220c9f9761f7f40a93588f300603d
 https://rinkeby.etherscan.io/tx/0xdbc282ad84adf8b5dd8352e2c9cb4feb2400d14d37dac21438ce34ade04cb592
 https://rinkeby.etherscan.io/tx/0xa1bb08813dfd5277e68782630a45700d0819e53bc39fdcb0a274693b76b62255
 https://rinkeby.etherscan.io/tx/0x35af2ebe0d46ce8bab9351d2edb691446b5ae928ea13ef20dc96d9f641370a44
+
+
+
+USE
+https://v5.myetherwallet.com/interface/interact-with-contract
