@@ -1,6 +1,5 @@
-## Welcome to GitHub Pages
+## Token Decorator
 
-You can use the [editor on GitHub](https://github.com/massnomis/project3/edit/main/README.md) to maintain and preview the content for your website in Markdown files.
 
 <!DOCTYPE html>
 <html>
