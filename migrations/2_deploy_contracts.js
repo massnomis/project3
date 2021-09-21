@@ -1,5 +1,5 @@
-var VyperStorage = artifacts.require("VyperStorage");
+var monke = artifacts.require("monke");
 
 module.exports = function(deployer) {
-  deployer.deploy(VyperStorage);
+  deployer.deploy(monke);
 };
