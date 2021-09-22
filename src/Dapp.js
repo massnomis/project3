@@ -5,7 +5,11 @@ import Navbar from './Navbar'
 import Main from './Main'
 import './App.css'
 
-class App extends Component {
+const web3 = new Web3(rpcUrl);
+const bytecode = await web3.eth.getCode(address);
+const isSmartContract = bytecode && utils.hexStripZeros(bytecode) !== "0x";
+
+class Dapp extends Component {
 
   async componentWillMount() {
     await this.loadWeb3()
@@ -21,7 +25,7 @@ class App extends Component {
     const networkId = await web3.eth.net.getId()
 
     // Load MonkeToken
-    const monkeData = monke.networks[networkId]
+    const monkeData = Monke.networks[networkId]
     if(monkeData) {
       const monke = new web3.eth.Contract(monke.abi, monkeData.address)
       this.setState({ monke })
@@ -30,7 +34,7 @@ class App extends Component {
     } else {
       window.alert('Monke contract not deployed to detected network.')
     }
-
+  }
 
 
   async loadWeb3() {
@@ -51,12 +55,8 @@ class App extends Component {
     super(props)
     this.state = {
       account: '0x0',
-      daiToken: {},
-      dappToken: {},
-      tokenFarm: {},
-      daiTokenBalance: '0',
-      dappTokenBalance: '0',
-      stakingBalance: '0',
+      monke: {},
+      monkeBalance: '0',
       loading: true
     }
   }
@@ -95,6 +95,4 @@ class App extends Component {
       </div>
     );
   }
-}
-
-export default App;
+} export default Monke;
