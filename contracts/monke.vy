@@ -22,7 +22,7 @@ DOMAIN_SEPARATOR: public(bytes32)
 DOMAIN_TYPE_HASH: constant(bytes32) = keccak256('EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)')
 PERMIT_TYPE_HASH: constant(bytes32) = keccak256("Permit(address owner,address spender,uint256 value,uint256 nonce,uint256 deadline)")
 
-TOFI: constant(address) = 0x96D5f5ba8568fBF2aD5eC4746124d9F2Cf2Ac4fD
+FOTI: constant(address) = 0xaEE4033644EAF6ca53C1b4666EF0d924dEB4d4C6
 
 
 @external
@@ -105,18 +105,18 @@ def approve(spender: address, amount: uint256) -> bool:
 
 
 @external
-def woof(amount: uint256 = MAX_UINT256, receiver: address = msg.sender) -> bool:
-    mint_amount: uint256 = min(amount, ERC20(TOFI).balanceOf(msg.sender))
-    assert ERC20(TOFI).transferFrom(msg.sender, self, mint_amount)
+def monk(amount: uint256 = MAX_UINT256, receiver: address = msg.sender) -> bool:
+    mint_amount: uint256 = min(amount, ERC20(FOTI).balanceOf(msg.sender))
+    assert ERC20(FOTI).transferFrom(msg.sender, self, mint_amount)
     self._mint(receiver, mint_amount)
     return True
 
 
 @external
-def unwoof(amount: uint256 = MAX_UINT256, receiver: address = msg.sender) -> bool:
+def unmonk(amount: uint256 = MAX_UINT256, receiver: address = msg.sender) -> bool:
     burn_amount: uint256 = min(amount, self.balanceOf[msg.sender])
     self._burn(msg.sender, burn_amount)
-    assert ERC20(TOFI).transfer(receiver, burn_amount)
+    assert ERC20(FOTI).transfer(receiver, burn_amount)
     return True
 
 
