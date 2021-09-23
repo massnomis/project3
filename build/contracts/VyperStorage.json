@@ -25,15 +25,14 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function",
-      "constant": true
+      "type": "function"
     }
   ],
   "bytecode": "0x61005856600436101561000d57610049565b600035601c526000513461004f576360fe47b181141561002f57600435600055005b636d4ce63c8114156100475760005460005260206000f35b505b60006000fd5b600080fd5b61000461005803610004600039610004610058036000f3",
   "deployedBytecode": "0x600436101561000d57610049565b600035601c526000513461004f576360fe47b181141561002f57600435600055005b636d4ce63c8114156100475760005460005260206000f35b505b60006000fd5b600080fd",
   "deployedSourceMap": "-1:-1:0:-;;;;;:::-;;:::-;:::-;;;;;;;;;:::-;32:62;;;;;:::-;85:9;-1:-1;66:16;:28;32:62;:::-;112:49;;;;;:::-;145:16;138:23;;;;;;112:49::-;-1:-1;:::-;;;;:::-;;;;",
   "source": "stored_data: uint256\n\n@external\ndef set(new_value : uint256):\n    self.stored_data = new_value\n\n@external\n@view\ndef get() -> uint256:\n    return self.stored_data\n",
-  "sourcePath": "/Users/whitneyturner/project3/contracts/VyperStorage.vy",
+  "sourcePath": "/home/gitpod/test1/project3/contracts/contracts/VyperStorage.vy",
   "ast": {
     "ast_type": "Module",
     "body": [
@@ -260,7 +259,7 @@
     "end_col_offset": 27,
     "end_lineno": 10,
     "lineno": 1,
-    "name": "VyperStorage.vy",
+    "name": "contracts/VyperStorage.vy",
     "node_id": 0,
     "src": "0:161:0"
   },
@@ -490,7 +489,7 @@
     "end_col_offset": 27,
     "end_lineno": 10,
     "lineno": 1,
-    "name": "VyperStorage.vy",
+    "name": "contracts/VyperStorage.vy",
     "node_id": 0,
     "src": "0:161:0"
   },
@@ -507,8 +506,7 @@
     }
   },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-21T19:07:29.216Z",
-  "networkType": "ethereum",
+  "updatedAt": "2021-09-23T23:12:43.160Z",
   "devdoc": {},
   "userdoc": {}
 }

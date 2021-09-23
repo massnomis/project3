@@ -17,6 +17,14 @@
  * phrase from a file you've .gitignored so it doesn't accidentally become public.
  *
  */
+ xDai: {
+    provider: () => new HDWalletProvider(mnemonic, 'https://xdai.poanetwork.dev'),
+    network_id = 100,
+    confirmations = 2,
+    gas = 500000,
+    gasPrice = 1000000000
+    skipDryRun = true
+  }
 
 // const HDWallet = require('truffle-hdwallet-provider');
 // const infuraKey = "fj4jll3k.....";
@@ -24,5 +32,4 @@
 // const fs = require('fs');
 // const mnemonic = fs.readFileSync(".secret").toString().trim();
 
-module.exports = {
-}
+
