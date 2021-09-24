@@ -1,57 +1,46 @@
 import React, { Component } from 'react'
-import Monke from '../abis/monke.json'
-import Foti from '../abis/foti.json'
+import Monke from '../src/abis/monke.json'
 import Navbar from './Navbar'
 import Main from './Main'
-import '../styles/globals.css'
-import 'tailwindcss/tailwind.css'
+import '../src/styles/Global.css'
+import 'tailwindcss/tailwind.css' 
 import { Web3ReactProvider } from '@web3-react/core'
-import Web3 from 'web3'
-const web3 = new Web3(rpcUrl);
-const bytecode = await web3.eth.getCode(address);
-const isSmartContract = bytecode && utils.hexStripZeros(bytecode) !== "0x";
+import Web3 from 'web3' 
 function getLibrary(provider) {
   return new Web3(provider)
 }
-function MyApp({ Component, pageProps }) {
+function tailwind ({ Component, pageProps }) {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       <Component {...pageProps} />
     </Web3ReactProvider>
   )
 }
-class Dapp extends Component {
+export default MyApp
+class MyApp extends Component {
   async componentWillMount() {
     await this.loadWeb3()
     await this.loadBlockchainData()
   }
-  async loadBlockchainData() {
+}
+  async ; loadBlockchainData(); {
     const web3 = window.web3
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
     const networkId = await web3.eth.net.getId()
     // Load MonkeToken
-    const monkeData = Monke.networks[networkId]
-    if(monkeData) {
-      const monke = new web3.eth.Contract(monke.abi, monkeData.address)
-      this.setState({ monke })
-      let monkeBalance = await monke.methods.balanceOf(this.state.account).call()
-      this.setState({ monkeBalance: monkeBalance.toString() })
+    const MonkeData = Monke.networks[networkId]
+    if(MonkeData) {
+      const mMnke = new web3.eth.Contract(Monke.abi, MonkeData.address)
+      this.setState({ Monke })
+      let MonkeBalance = await Monke.methods.balanceOf(this.state.account).call()
+      this.setState({ MonkeBalance: MonkeBalance.toString() })
     } else {
       window.alert('Monke contract not deployed to detected network.')
     }
   }
-  // Load FotiToken
-  const FotiData = Foti.networks[networkId]
-  if(FotiData) {
-    const Foti = new web3.eth.Contract(Foti.abi, FotiData.address)
-    this.setState({ Foti })
-    let FotiBalance = await Foti.methods.balanceOf(this.state.account).call()
-    this.setState({ FotiBalance: FotiBalance.toString() })
-  } else {
-    window.alert('Foti contract not deployed to detected network.')
-  }
-  async loadWeb3() {
+  
+  async ; loadWeb3() ; {
     if (window.ethereum) {
       window.web3 = new Web3(window.ethereum)
       await window.ethereum.enable()
@@ -77,7 +66,7 @@ class Dapp extends Component {
       this.setState({ loading: false })
     })
   }
-  constructor(props) {
+  constructor(props) ; {
     super(props)
     this.state = {
       account: '0x0',
@@ -89,7 +78,7 @@ class Dapp extends Component {
       loading: true
     }
   }
-  render() {
+  render() ; {
     let content
     if(this.state.loading) {
       content = <p id="loader" className="text-center">Loading...</p>
@@ -116,5 +105,6 @@ class Dapp extends Component {
             </main>
         </div>
       </div>
-    );
-} export default Monke;
+      </div>
+    ); 
+  }

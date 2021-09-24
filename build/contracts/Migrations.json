@@ -59,7 +59,7 @@
   "sourceMap": "66:311:2:-;;;155:50;8:9:-1;5:2;;;30:1;27;20:12;5:2;155:50:2;190:10;182:5;;:18;;;;;;;;;;;;;;;;;;66:311;;;;;;",
   "deployedSourceMap": "66:311:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;66:311:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;114:36;;;:::i;:::-;;;;;;;;;;;;;;;;;;;90:20;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;272:103;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;272:103:2;;;;;;;;;;;;;;;;;:::i;:::-;;114:36;;;;:::o;90:20::-;;;;;;;;;;;;;:::o;272:103::-;255:5;;;;;;;;;;;241:19;;:10;:19;;;237:26;;;361:9;334:24;:36;;;;237:26;272:103;:::o",
   "source": "// SPDX-License-Identifier: MIT\npragma solidity >=0.4.21 <0.6.0;\n\ncontract Migrations {\n  address public owner;\n  uint public last_completed_migration;\n\n  constructor() public {\n    owner = msg.sender;\n  }\n\n  modifier restricted() {\n    if (msg.sender == owner) _;\n  }\n\n  function setCompleted(uint completed) public restricted {\n    last_completed_migration = completed;\n  }\n}\n",
-  "sourcePath": "/home/gitpod/test1/project3/contracts/contracts/Migrations.sol",
+  "sourcePath": "/Users/whitneyturner/project3/contracts/contracts/Migrations.sol",
   "ast": {
     "absolutePath": "project:/contracts/contracts/Migrations.sol",
     "exportedSymbols": {
@@ -954,16 +954,9 @@
     "name": "solc",
     "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
   },
-  "networks": {
-    "5777": {
-      "events": {},
-      "links": {},
-      "address": "0xE2A6382e8b8dedce47444e137bCc338C8A835510",
-      "transactionHash": "0xddbefb4e91fdde33a6a490c73fd8623fd261e67ee84d6cc18747a3f4ee2e3973"
-    }
-  },
+  "networks": {},
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-09-23T23:12:43.159Z",
+  "updatedAt": "2021-09-24T00:30:12.100Z",
   "devdoc": {
     "methods": {}
   },

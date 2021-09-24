@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { useWeb3React } from "@web3-react/core";
 import Dapp from '../src/Dapp.js';
 import * as serviceWorker from './serviceWorker';
-import { injected } from "../components/wallet/connector";
+import { injected } from "../src/connector.js";
 export default function Home() {
     const { active, account, library, connector, activate, deactivate } = useWeb3React()
   async function connect() {
